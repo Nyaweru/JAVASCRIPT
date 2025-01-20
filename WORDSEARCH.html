@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Search and Highlight</title>
+  <style>
+    .highlight {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Search and Highlight Word</h1>
+  
+  <input type="text" id="searchInput" placeholder="Enter word to search">
+  <button onclick="highlightWord()">Search</button>
+  
+  <!-- Paragraph to search -->
+  <p id="textParagraph">
+    Both JavaScript and TypeScript are powerful tools for web development. 
+JavaScript is ideal for quick projects and scripts, while TypeScript shines in larger 
+applications where maintainability and scalability are crucial. Understanding their 
+similarities and differences helps developers choose the right tool for their specific 
+needs.
+  </p>
+  
+  <script>
+    function highlightWord() {
+      // Get the input word and paragraph
+      const inputWord = document.getElementById('searchInput').value.trim();
+      const paragraph = document.getElementById('textParagraph');
+      const originalText = paragraph.textContent;
+
+      // Reset paragraph text (clear previous highlights)
+      paragraph.innerHTML = originalText;
+
+      // Check if input word is not empty
+      if (inputWord) {
+        // Create a regular expression to match the word, case-insensitive
+        const regex = new RegExp(`(${inputWord})`, 'gi');
+
+        // Replace the word with a highlighted version
+        paragraph.innerHTML = originalText.replace(regex, `<span class="highlight">$1</span>`);
+      }
+    }
+  </script>
+</body>
+</html>
