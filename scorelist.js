@@ -1,25 +1,23 @@
-
+// Function to generate a random grade
 function getRandomGrade() {
-    const grades = ['A', 'B', 'C', 'D', 'E'];
+    var grades = ['A', 'B', 'C', 'D', 'E'];
     return grades[Math.floor(Math.random() * grades.length)];
 }
-
-// Generate a list of students with grades
+// Function to generate a score list of 5 students
 function generateScoreList() {
-    const students = [
-        { name: 'Student 1', grade: getRandomGrade('A') },
-        { name: 'Student 2', grade: getRandomGrade('B') },
-        { name: 'Student 3', grade: getRandomGrade('C') },
-        { name: 'Student 4', grade: getRandomGrade('D') },
-        { name: 'Student 5', grade: getRandomGrade('E') },
-    ];
-
+    var students = [];
+    for (var i = 1; i <= 5; i++) {
+        var student = {
+            name: "Student ".concat(i),
+            grade: getRandomGrade(),
+        };
+        students.push(student);
+    }
     return students;
 }
-
-// Display the score list
-const scoreList = generateScoreList();
+// Generate and display the score list
+var scoreList = generateScoreList();
 console.log("Score List:");
-scoreList.forEach(student => {
-    console.log(`${student.name}: Grade ${student.grade}`);
+scoreList.forEach(function (student) {
+    console.log("".concat(student.name, ": Grade ").concat(student.grade));
 });
