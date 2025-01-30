@@ -46,3 +46,35 @@ const person = {
     //access such you use dot notation or bracket method
 
     myObj.myCars.car2;
+//object constructor functions - many objects of the same type
+//To create an object type we use an object constructor function.
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+//creating a person object
+
+const man = new Person("John", "Doe", 50, "blue");
+// const me = new person();
+//const mum = new Person();
+
+
+// adding a property to a constructor
+ man.height = "198"; // adds this to man not to any other object
+// Display age
+document.getElementById("demo").innerHTML =
+"This man is " + man.age + ".";
+
+
+// Constructor Function methods   
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+  this.fullName = function() {
+    return this.firstName + " " + this.lastName
+  };
+}
