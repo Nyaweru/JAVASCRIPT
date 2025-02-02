@@ -13,20 +13,10 @@ function getDifference(){
  
 }
 console.log("difference:", getDifference());
-// also 
- let  a = getDifference(5,3);// 5 and 3 are parameters
-  function getDifference(i,j){
-    return a-b ;
-  }
+
+  
   
 
   // functions as variable values
   
-let text = "Happy coding with  " + getLanguage() + " .";
-document.getElementById("demo").innerHTML = text;
-
-function getLanguage() {
-  return ("JAVASCRIPT")
-
-  }
   //local variables are only the ones inside a function.
