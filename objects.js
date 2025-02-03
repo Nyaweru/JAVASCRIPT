@@ -64,8 +64,7 @@ const man = new Person("John", "Doe", 50, "blue");
 // adding a property to a constructor
  man.height = "198"; // adds this to man not to any other object
 // Display age
-document.getElementById("demo").innerHTML =
-"This man is " + man.age + ".";
+console.log("This man is " + man.age + ".");
 
 
 // Constructor Function methods   
