@@ -34,3 +34,31 @@ console.log('Set converted to an array:', myArray);
 // Clearing all elements in the Set
 mySet.clear();
 console.log('Set after clearing:', mySet);
+// Creating a Set with some duplicate values
+const numbers = new Set([1, 2, 3, 3, 4, 5, 5]);
+
+// Adding values to the Set
+numbers.add(6);
+numbers.add(7);
+
+// Checking for a specific value
+const hasThree = numbers.has(3);
+const hasTen = numbers.has(10);
+
+// Removing a value
+numbers.delete(4);
+
+// Getting the size of the Set
+const size = numbers.size;
+
+// Converting Set to an array
+const numberArray = [...numbers];
+
+// Logging everything at once
+console.log({
+  "Set Contents": numbers,
+  "Contains 3?": hasThree,
+  "Contains 10?": hasTen,
+  "Set Size": size,
+  "Set as Array": numberArray
+});
