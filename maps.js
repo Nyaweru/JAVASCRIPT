@@ -17,7 +17,9 @@ const size = users.size;
 
 // Converting Map to an Array
 const usersArray = [...users];
-
+// converting to string
+const str = JSON.stringify([...users]);
+console.log ('string is', str);
 // Logging everything at once
 console.log({
   "Users Map": users,

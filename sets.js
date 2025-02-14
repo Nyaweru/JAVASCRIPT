@@ -30,7 +30,9 @@ mySet.forEach(value => {
 // Converting Set to an Array
 const myArray = Array.from(mySet);
 console.log('Set converted to an array:', myArray);
-
+//converting to String
+const str = JSON.stringify([...mySet]);
+console.log(str)
 // Clearing all elements in the Set
 mySet.clear();
 console.log('Set after clearing:', mySet);
